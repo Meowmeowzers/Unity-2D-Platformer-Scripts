@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class MenuItemHover : MonoBehaviour
 {
+    [SerializeField] private GameObject selector;
 
-    private GameObject selector;
+    void Start()
+    {
+        selector = GameObject.Find("Select Icon");
+    }
 
+    void Update()
+    {
+        
+    }
 
-    
     public void Translate()
     {
-        selector.transform.position = new Vector3(transform.position.x - 80f, transform.position.y, transform.position.z);
-    } 
+        selector.transform.position = new Vector2(transform.position.x - 80f, transform.position.y);
+
+    }
 }
